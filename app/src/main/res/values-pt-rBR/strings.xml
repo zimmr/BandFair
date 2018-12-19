@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BandFair</string>
+    <string name="spl_et_login">Username ou E-Mail</string>
+    <string name="spl_et_pwd">Senha</string>
+    <string name="spl_bt_signin">Entrar</string>
+    <string name="spl_bt_register">Não tem uma conta ainda?</string>
+    <string name="spl_bt_signup">Registre-se</string>
+    <string name="spl_tv_title">BandFair</string>
+</resources>
