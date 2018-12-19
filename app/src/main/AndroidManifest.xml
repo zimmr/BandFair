@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SplashScreen"></activity>
+        <activity android:name=".ui.SplashScreen" />
+        <activity android:name=".ui.RegisterPage1" />
+        <activity android:name=".ui.RegisterPage2"></activity>
     </application>
 
 </manifest>

@@ -7,4 +7,10 @@
     <string name="spl_bt_register">Não tem uma conta ainda?</string>
     <string name="spl_bt_signup">Registre-se</string>
     <string name="spl_tv_title">BandFair</string>
+    <string name="rg1_tv_title">Registre-se no BandFair</string>
+    <string name="rg1_et_name">Nome</string>
+    <string name="rg1_et_username">Nome de Usuário</string>
+    <string name="rg1_et_email">Email</string>
+    <string name="rg1_et_birthdate">Data de Nascimento</string>
+    <string name="rg1_bt_next">Avançar</string>
 </resources>
