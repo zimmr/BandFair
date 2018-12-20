@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RegisterPage3">
+
+
+    <TextView
+        android:id="@+id/rg3_tv_instruments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_tv_instruments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_guitar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/rg3_cb_guitar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_tv_instruments" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_drums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/rg3_cb_drums"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_cb_guitar" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_vocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_cb_vocal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toEndOf="@+id/rg3_cb_drums"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_cb_bass" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_bass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/rg3_cb_bass"
+        app:layout_constraintStart_toEndOf="@+id/rg3_cb_guitar"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_tv_instruments" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_keys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_cb_keys"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toEndOf="@+id/rg3_cb_bass"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_tv_instruments" />
+
+    <Button
+        android:id="@+id/rg3_bt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_bt_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rg3_et_other"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_cb_vocal" />
+
+    <EditText
+        android:id="@+id/rg3_et_other"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/rg3_et_other"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/rg3_bt_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_cb_drums" />
+
+    <TextView
+        android:id="@+id/rg3_tv_genres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_tv_genres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_et_other" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/rg3_cb_rock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rg3_cb_pop" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_cb_pop"
+        app:layout_constraintEnd_toStartOf="@+id/rg3_cb_country"
+        app:layout_constraintStart_toEndOf="@+id/rg3_cb_rock"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_tv_genres" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_cb_country"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toEndOf="@+id/rg3_cb_pop"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_tv_genres" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_jazz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_cb_jazz"
+        app:layout_constraintEnd_toStartOf="@+id/rg3_cb_pagode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_cb_rock" />
+
+    <CheckBox
+        android:id="@+id/rg3_cb_pagode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/rg3_cb_pagode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rg3_cb_jazz"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_cb_pop" />
+
+    <EditText
+        android:id="@+id/rg3_et_other_genre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/rg3_et_other"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/rg3_bt_add_genre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_cb_jazz" />
+
+    <Button
+        android:id="@+id/rg3_bt_add_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_bt_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rg3_et_other_genre"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_cb_pagode" />
+
+    <Button
+        android:id="@+id/rg3_bt_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/rg_bt_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_bt_add_genre"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

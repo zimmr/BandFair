@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".ui.SplashScreen" />
         <activity android:name=".ui.RegisterPage1" />
-        <activity android:name=".ui.RegisterPage2"></activity>
+        <activity android:name=".ui.RegisterPage2" />
+        <activity android:name=".ui.RegisterPage3" />
+        <activity android:name=".ui.ProfilePage"></activity>
     </application>
 
 </manifest>

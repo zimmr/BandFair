@@ -8,9 +8,26 @@
     <string name="spl_bt_signup">Registre-se</string>
     <string name="spl_tv_title">BandFair</string>
     <string name="rg1_tv_title">Registre-se no BandFair</string>
-    <string name="rg1_et_name">Nome</string>
     <string name="rg1_et_username">Nome de Usuário</string>
     <string name="rg1_et_email">Email</string>
-    <string name="rg1_et_birthdate">Data de Nascimento</string>
-    <string name="rg1_bt_next">Avançar</string>
+    <string name="rg2_et_birthdate">Data de Nascimento</string>
+    <string name="rg_bt_next">Avançar</string>
+
+    <string name="rg3_tv_instruments">Instrumentos</string>
+    <string name="rg3_cb_guitar">Guitarra</string>
+    <string name="rg3_cb_bass">Baixo</string>
+    <string name="rg3_cb_drums">Bateria</string>
+    <string name="rg3_cb_vocal">Vocal</string>
+    <string name="rg3_cb_keys">Teclas</string>
+    <string name="rg3_et_other">Outros</string>
+
+    <string name="rg3_bt_add">Adicionar</string>
+    <string name="rg3_tv_genres">Genêros</string>
+    <string name="rg3_cb_rock">Rock</string>
+    <string name="rg3_cb_pop">Pop</string>
+    <string name="rg3_cb_country">Sertanejo</string>
+    <string name="rg3_cb_jazz">Jazz</string>
+    <string name="rg3_cb_pagode">Pagode</string>
+    <string name="rg1_et_pwd">Password</string>
+    <string name="rg2_et_name">Name</string>
 </resources>
