@@ -1,14 +1,15 @@
 package zimmer.bandfair.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Musician {
+public class Musician implements Serializable {
     private String name;
     private String username;
     private String email;
     private String password;
     private String birthDate;
-    private String sex;
+    private int sex;
     private String city;
     private String neighborhood;
     private ArrayList<String> instruments;
@@ -58,10 +59,16 @@ public class Musician {
     }
 
     public String getSex() {
-        return sex;
+        if (this.sex == 0){
+            return "Female";
+        } else if (this.sex == 1){
+            return "Male";
+        } else {
+            return "";
+        }
     }
 
-    public void setSex(String sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 

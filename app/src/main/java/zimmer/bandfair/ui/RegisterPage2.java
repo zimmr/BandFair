@@ -1,5 +1,6 @@
 package zimmer.bandfair.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,8 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import zimmer.bandfair.R;
+import zimmer.bandfair.model.Musician;
 
 public class RegisterPage2 extends AppCompatActivity {
 
@@ -29,11 +32,47 @@ public class RegisterPage2 extends AppCompatActivity {
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (etName.getText().toString().isEmpty()){
+                    toast("Name is empty!");
+                    return;
+                }
+                if (etBirthDate.getText().toString().isEmpty()){
+                    toast("Birth Date is empty!");
+                    return;
+                }
 
+                Musician m;
+                if (getIntent().hasExtra("m")){
+                    m = (Musician) getIntent().getSerializableExtra("m");
+                    m.setName(etName.getText().toString());
+                    m.setBirthDate(etBirthDate.getText().toString());
+
+                    switch (rgSex.getCheckedRadioButtonId()){
+                        case R.id.rg2_rb_female:
+                            m.setSex(0);
+                            break;
+                        case R.id.rg2_rb_male:
+                            m.setSex(1);
+                            break;
+                        default:
+                            toast("Select your sex!");
+                            return;
+                    }
+
+//                    m.setCity();
+//                    m.setNeighborhood();
+
+                    Intent it  = new Intent(RegisterPage2.this, RegisterPage3.class);
+                    it.putExtra("m", m);
+                    startActivity(it);
+                }
             }
         });
     }
 
+    private void toast(String msg){
+        Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG).show();
+    }
 
     private void init(){
         etName = findViewById(R.id.rg2_et_name);
