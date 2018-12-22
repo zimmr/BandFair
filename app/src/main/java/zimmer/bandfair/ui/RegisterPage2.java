@@ -19,7 +19,7 @@ public class RegisterPage2 extends AppCompatActivity {
     private EditText etBirthDate;
     private RadioGroup rgSex;
     private Spinner spCity;
-    private Spinner spNeighborhood;
+    private Spinner spState;
     private Button btNext;
 
     @Override
@@ -60,7 +60,7 @@ public class RegisterPage2 extends AppCompatActivity {
                     }
 
 //                    m.setCity();
-//                    m.setNeighborhood();
+//                    m.setState();
 
                     Intent it  = new Intent(RegisterPage2.this, RegisterPage3.class);
                     it.putExtra("m", m);
@@ -78,8 +78,8 @@ public class RegisterPage2 extends AppCompatActivity {
         etName = findViewById(R.id.rg2_et_name);
         etBirthDate = findViewById(R.id.rg2_et_birthdate);
         rgSex = findViewById(R.id.rg2_rg_sex);
+        spState = findViewById(R.id.rg2_sp_state);
         spCity = findViewById(R.id.rg2_sp_city);
-        spNeighborhood = findViewById(R.id.rg2_sp_nb);
         btNext = findViewById(R.id.rg2_bt_next);
     }
 }

@@ -74,25 +74,25 @@
         app:layout_constraintTop_toBottomOf="@+id/rg2_et_birthdate" />
 
     <Spinner
-        android:id="@+id/rg2_sp_city"
+        android:id="@+id/rg2_sp_state"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/rg2_sp_nb"
+        app:layout_constraintEnd_toStartOf="@+id/rg2_sp_city"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rg2_tv_location" />
 
     <Spinner
-        android:id="@+id/rg2_sp_nb"
+        android:id="@+id/rg2_sp_city"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rg2_sp_city"
+        app:layout_constraintStart_toEndOf="@+id/rg2_sp_state"
         app:layout_constraintTop_toBottomOf="@+id/rg2_tv_location" />
 
     <TextView
@@ -121,7 +121,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg2_sp_nb"
+        app:layout_constraintTop_toBottomOf="@+id/rg2_sp_city"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
