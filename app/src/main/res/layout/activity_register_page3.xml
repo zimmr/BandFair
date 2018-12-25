@@ -153,7 +153,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="@string/rg3_cb_jazz"
         app:layout_constraintEnd_toStartOf="@+id/rg3_cb_pagode"
@@ -164,11 +164,9 @@
         android:id="@+id/rg3_cb_pagode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
         android:text="@string/rg3_cb_pagode"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rg3_cb_jazz"
         app:layout_constraintTop_toBottomOf="@+id/rg3_cb_pop" />
 

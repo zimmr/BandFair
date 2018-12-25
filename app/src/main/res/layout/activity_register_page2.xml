@@ -18,21 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/rg2_et_birthdate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/rg2_et_birthdate"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg2_et_name" />
-
     <RadioGroup
         android:id="@+id/rg2_rg_sex"
         android:layout_width="0dp"
@@ -44,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/rg2_tv_sex"
-        app:layout_constraintTop_toBottomOf="@+id/rg2_et_birthdate">
+        app:layout_constraintTop_toBottomOf="@+id/rg2_et_name">
 
         <RadioButton
             android:id="@+id/rg2_rb_male"
@@ -71,14 +56,14 @@
         android:text="TextView"
         app:layout_constraintEnd_toStartOf="@+id/rg2_rg_sex"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg2_et_birthdate" />
+        app:layout_constraintTop_toBottomOf="@+id/rg2_et_name" />
 
     <Spinner
         android:id="@+id/rg2_sp_state"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/rg2_sp_city"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +74,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rg2_sp_state"
@@ -100,13 +85,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg2_rg_sex" />
+        app:layout_constraintTop_toBottomOf="@+id/rg3_sp_year" />
 
     <Button
         android:id="@+id/rg2_bt_next"
@@ -137,5 +122,51 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rg2_tv_title" />
+
+    <TextView
+        android:id="@+id/rg3_tv_birthdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/rg3_tv_birthdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg2_rg_sex" />
+
+    <Spinner
+        android:id="@+id/rg3_sp_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/rg3_sp_month"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_tv_birthdate" />
+
+    <Spinner
+        android:id="@+id/rg3_sp_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/rg3_sp_day"
+        app:layout_constraintStart_toEndOf="@+id/rg3_sp_year"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_tv_birthdate" />
+
+    <Spinner
+        android:id="@+id/rg3_sp_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rg3_sp_month"
+        app:layout_constraintTop_toBottomOf="@+id/rg3_tv_birthdate" />
 
 </android.support.constraint.ConstraintLayout>

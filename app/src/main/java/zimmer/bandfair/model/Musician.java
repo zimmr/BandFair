@@ -14,6 +14,7 @@ public class Musician implements Serializable {
     private String neighborhood;
     private ArrayList<String> instruments;
     private ArrayList<String> genres;
+//    private int Year;
 
     public Musician() {
     }
@@ -54,8 +55,8 @@ public class Musician implements Serializable {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(String year, String month, String day) {
+        this.birthDate = year + "-" + month + "-" + day;
     }
 
     public String getSex() {
@@ -80,14 +81,6 @@ public class Musician implements Serializable {
         this.city = city;
     }
 
-    public String getNeighborhood() {
-        return neighborhood;
-    }
-
-    public void setNeighborhood(String neighborhood) {
-        this.neighborhood = neighborhood;
-    }
-
     public ArrayList<String> getInstruments() {
         return instruments;
     }
@@ -103,6 +96,8 @@ public class Musician implements Serializable {
     public void setGenres(ArrayList<String> genres) {
         this.genres = genres;
     }
+
+//    public int calculateAge(){}
 
     @Override
     public String toString() {

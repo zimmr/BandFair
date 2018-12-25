@@ -45,7 +45,7 @@ public class RegisterPage2 extends AppCompatActivity {
                 if (getIntent().hasExtra("m")){
                     m = (Musician) getIntent().getSerializableExtra("m");
                     m.setName(etName.getText().toString());
-                    m.setBirthDate(etBirthDate.getText().toString());
+//                    m.setBirthDate(etBirthDate.getText().toString());
 
                     switch (rgSex.getCheckedRadioButtonId()){
                         case R.id.rg2_rb_female:
