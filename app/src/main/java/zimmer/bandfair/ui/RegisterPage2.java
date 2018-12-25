@@ -16,7 +16,7 @@ import zimmer.bandfair.model.Musician;
 public class RegisterPage2 extends AppCompatActivity {
 
     private EditText etName;
-    private EditText etBirthDate;
+//    private EditText etBirthDate;
     private RadioGroup rgSex;
     private Spinner spCity;
     private Spinner spState;
@@ -36,10 +36,10 @@ public class RegisterPage2 extends AppCompatActivity {
                     toast("Name is empty!");
                     return;
                 }
-                if (etBirthDate.getText().toString().isEmpty()){
-                    toast("Birth Date is empty!");
-                    return;
-                }
+//                if (etBirthDate.getText().toString().isEmpty()){
+//                    toast("Birth Date is empty!");
+//                    return;
+//                }
 
                 Musician m;
                 if (getIntent().hasExtra("m")){
@@ -76,7 +76,7 @@ public class RegisterPage2 extends AppCompatActivity {
 
     private void init(){
         etName = findViewById(R.id.rg2_et_name);
-        etBirthDate = findViewById(R.id.rg2_et_birthdate);
+//        etBirthDate = findViewById(R.id.rg2_et_birthdate);
         rgSex = findViewById(R.id.rg2_rg_sex);
         spState = findViewById(R.id.rg2_sp_state);
         spCity = findViewById(R.id.rg2_sp_city);

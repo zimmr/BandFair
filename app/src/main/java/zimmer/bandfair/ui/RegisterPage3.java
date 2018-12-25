@@ -9,6 +9,9 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import zimmer.bandfair.R;
 import zimmer.bandfair.model.Musician;
@@ -30,6 +33,9 @@ public class RegisterPage3 extends AppCompatActivity {
     private EditText etOtherGenres;
     private Button btAddGenre;
     private Button btNext;
+    private ArrayList<String> instruments;
+    private ArrayList<String> genres;
+
 
 
     @Override
@@ -39,6 +45,28 @@ public class RegisterPage3 extends AppCompatActivity {
 
         init();
 
+        btAddInstrument.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Musician m;
+                if (getIntent().hasExtra("m")){
+                    instruments.add(etOtherInstruments.getText().toString());
+                    clear();
+                }
+            }
+        });
+
+        btAddGenre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Musician m;
+                if (getIntent().hasExtra("m")){
+                    genres.add(etOtherGenres.getText().toString());
+                    clear();
+                }
+            }
+        });
+
         btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,8 +74,37 @@ public class RegisterPage3 extends AppCompatActivity {
                 if (getIntent().hasExtra("m")){
                     m = (Musician) getIntent().getSerializableExtra("m");
 
-//                    m.setInstruments();
-//                    m.setGenres();
+                    if (cbGuitar.isChecked()){
+                        instruments.add(cbGuitar.getText().toString());
+                    }
+                    if (cbBass.isChecked()){
+                        instruments.add(cbBass.getText().toString());
+                    }
+                    if (cbDrums.isChecked()){
+                        instruments.add(cbDrums.getText().toString());
+                    }
+                    if (cbKeys.isChecked()){
+                        instruments.add(cbKeys.getText().toString());
+                    }
+                    if (cbVocals.isChecked()){
+                        instruments.add(cbVocals.getText().toString());
+                    }
+
+                    if (cbRock.isChecked()){
+                        genres.add(cbRock.getText().toString());
+                    }
+                    if (cbPop.isChecked()){
+                        genres.add(cbPop.getText().toString());
+                    }
+                    if (cbCountry.isChecked()){
+                        genres.add(cbCountry.getText().toString());
+                    }
+                    if (cbJazz.isChecked()){
+                        genres.add(cbJazz.getText().toString());
+                    }
+                    if (cbPagode.isChecked()){
+                        genres.add(cbPagode.getText().toString());
+                    }
 
                     Intent it = new Intent(RegisterPage3.this, ProfilePage.class);
                     startActivity(it);
@@ -55,6 +112,15 @@ public class RegisterPage3 extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void clear() {
+        etOtherInstruments.setText("");
+        etOtherGenres.setText("");
+    }
+
+    public void toast(String msg){
+        Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG).show();
     }
 
     private void init(){
@@ -74,6 +140,8 @@ public class RegisterPage3 extends AppCompatActivity {
         etOtherGenres = findViewById(R.id.rg3_et_other_genre);
         btAddGenre = findViewById(R.id.rg3_bt_add_genre);
         btNext = findViewById(R.id.rg3_bt_next);
+        instruments = new ArrayList<>();
+        genres = new ArrayList<>();
     }
 
 }

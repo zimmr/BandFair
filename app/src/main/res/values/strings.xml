@@ -35,6 +35,7 @@
     <string name="pf_tv_instruments_label">Instruments</string>
     <string name="pf_tv_genres_label">Genres</string>
     <string name="ma_et_search">Search</string>
+    <string name="pf_bt_save">Save</string>
 
     <string-array name="ma_et_cat">
         <item>Select</item>

@@ -11,7 +11,7 @@ public class Musician implements Serializable {
     private String birthDate;
     private int sex;
     private String city;
-    private String neighborhood;
+    private String state;
     private ArrayList<String> instruments;
     private ArrayList<String> genres;
 //    private int Year;
@@ -101,17 +101,6 @@ public class Musician implements Serializable {
 
     @Override
     public String toString() {
-        return "Musician{" +
-                "name='" + name + '\'' +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", sex='" + sex + '\'' +
-                ", city='" + city + '\'' +
-                ", neighborhood='" + neighborhood + '\'' +
-                ", instruments=" + instruments +
-                ", genres=" + genres +
-                '}';
+        return  " | " + sex + " | " + this.city + " / " + this.state;
     }
 }

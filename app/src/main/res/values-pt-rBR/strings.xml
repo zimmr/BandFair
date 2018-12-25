@@ -34,6 +34,7 @@
     <string name="pf_tv_name">Name</string>
     <string name="pf_tv_instruments_label">Instruments</string>
     <string name="pf_tv_genres_label">Genres</string>
+    <string name="pf_bt_save">Save</string>
 
     <string-array name="rg2_sp_year">
         <item>2018</item>
