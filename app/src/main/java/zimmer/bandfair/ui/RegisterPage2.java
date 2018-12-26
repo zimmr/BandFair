@@ -16,10 +16,12 @@ import zimmer.bandfair.model.Musician;
 public class RegisterPage2 extends AppCompatActivity {
 
     private EditText etName;
-//    private EditText etBirthDate;
+    private Spinner spBirthYear;
+    private Spinner spBirthMonth;
+    private Spinner spBirthDay;
     private RadioGroup rgSex;
-    private Spinner spCity;
     private Spinner spState;
+    private Spinner spCity;
     private Button btNext;
 
     @Override
@@ -36,16 +38,14 @@ public class RegisterPage2 extends AppCompatActivity {
                     toast("Name is empty!");
                     return;
                 }
-//                if (etBirthDate.getText().toString().isEmpty()){
-//                    toast("Birth Date is empty!");
-//                    return;
-//                }
 
                 Musician m;
                 if (getIntent().hasExtra("m")){
                     m = (Musician) getIntent().getSerializableExtra("m");
                     m.setName(etName.getText().toString());
-//                    m.setBirthDate(etBirthDate.getText().toString());
+                    m.setBirthDate(spBirthYear.getSelectedItem().toString(),
+                        spBirthMonth.getSelectedItem().toString(),
+                        spBirthDay.getSelectedItem().toString());
 
                     switch (rgSex.getCheckedRadioButtonId()){
                         case R.id.rg2_rb_female:
@@ -59,8 +59,8 @@ public class RegisterPage2 extends AppCompatActivity {
                             return;
                     }
 
-//                    m.setCity();
-//                    m.setState();
+                    m.setState(spState.getSelectedItem().toString());
+                    m.setCity(spCity.getSelectedItem().toString());
 
                     Intent it  = new Intent(RegisterPage2.this, RegisterPage3.class);
                     it.putExtra("m", m);
@@ -76,7 +76,9 @@ public class RegisterPage2 extends AppCompatActivity {
 
     private void init(){
         etName = findViewById(R.id.rg2_et_name);
-//        etBirthDate = findViewById(R.id.rg2_et_birthdate);
+        spBirthYear = findViewById(R.id.rg2_sp_year);
+        spBirthMonth = findViewById(R.id.rg2_sp_month);
+        spBirthDay = findViewById(R.id.rg2_sp_day);
         rgSex = findViewById(R.id.rg2_rg_sex);
         spState = findViewById(R.id.rg2_sp_state);
         spCity = findViewById(R.id.rg2_sp_city);

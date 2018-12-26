@@ -36,6 +36,11 @@
     <string name="pf_tv_genres_label">Genres</string>
     <string name="ma_et_search">Search</string>
     <string name="pf_bt_save">Save</string>
+    <string name="rg2_tv_sex">Sex</string>
+    <string name="rg2_rb_male">Male</string>
+    <string name="rg2_rb_female">Female</string>
+    <string name="rg2_tv_location">Location</string>
+    <string name="ma_bt_search">search</string>
 
     <string-array name="ma_et_cat">
         <item>Select</item>
@@ -166,5 +171,13 @@
         <item>31</item>
     </string-array>
 
+    <string-array name="rg2_sp_state">
+        <item>RS</item>
+    </string-array>
+
+    <string-array name="rg2_sp_city">
+        <item>Canoas</item>
+        <item>Porto Alegre</item>
+    </string-array>
 
 </resources>

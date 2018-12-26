@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import zimmer.bandfair.R;
+import zimmer.bandfair.model.Musician;
 
 public class ProfilePage extends AppCompatActivity {
 
@@ -30,6 +31,16 @@ public class ProfilePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Musician m;
+                if (getIntent().hasExtra("m")){
+                    m = (Musician) getIntent().getSerializableExtra("m");
+
+                    tvName.setText(m.getName().toString());
+//                    tvAge.setText();
+                    tvLocation.setText(m.getCity() + " / " + m.getState());
+                    tvInstruments.setText(m.getInstruments().toString());
+                    tvGenres.setText(m.getGenres().toString());
+                }
 
                 Intent it = new Intent(ProfilePage.this, MainActivity.class);
                 startActivity(it);

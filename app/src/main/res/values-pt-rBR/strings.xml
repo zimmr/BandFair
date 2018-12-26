@@ -35,6 +35,10 @@
     <string name="pf_tv_instruments_label">Instruments</string>
     <string name="pf_tv_genres_label">Genres</string>
     <string name="pf_bt_save">Save</string>
+    <string name="rg2_tv_sex">Sex</string>
+    <string name="rg2_rb_male">Male</string>
+    <string name="rg2_tv_location">Location</string>
+    <string name="ma_bt_search">search</string>
 
     <string-array name="rg2_sp_year">
         <item>2018</item>
